@@ -1,0 +1,34 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #adb5bd;
+  --tertiary-color: #6c757d;
+  --other-color: #343a40;
+  --text-color: #212529;
+  --lila: rgb(155, 81, 224);
+  --heading-font: "Spinnaker", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.5;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
