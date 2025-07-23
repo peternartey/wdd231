@@ -1,109 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Peter Nartey" />
-    <link rel="icon" href="images/favicon.ico" />
-    <meta name="description" content="Chamber of Commerce Directory" />
-    <title>Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/menu-footer.css">
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/smaller.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spinnaker&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peter Nartey Chamber of Commerce - Connecting and supporting local businesses.">
+   <meta name="author" content="Peter Nartey" />
+  <title>Peter Nartey Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+   <div class="logo">
+  <a href="#">
+    <img src="images/logo3.png" alt="PNartey Chamber Logo">
+  </a>
+</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#directory">Directory</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#join" class="btn">Join</a>
+      </nav>
+    </div>
+  </header>
 
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Supporting Local Business in Peter Nartey</h1>
+      <p>Empowering our business community through resources, events, and connections.</p>
+      <a href="#join" class="btn">Join the Chamber</a>
+    </div>
+  </section>
 
-    <meta property="og:title" content=" chamber of commerce" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://cristhina23.github.io/wdd231/chamber/images/social-image.png" />
-    <meta property="og:description" content="Discover events, resources, and business opportunities at the Lima Peru Chamber of Commerce. Connect, grow, and support the local community.">
+  <!-- Quick Access Blocks -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="card">
+        <h2>Business Directory</h2>
+        <p>Explore our member businesses and services.</p>
+        <a href="#directory" class="btn-small">View Directory</a>
+      </div>
+      <div class="card">
+        <h2>Events</h2>
+        <p>Workshops, mixers, and networking opportunities.</p>
+        <a href="#events" class="btn-small">See Events</a>
+      </div>
+      <div class="card">
+        <h2>Resources</h2>
+        <p>Guides and support tools for local businesses.</p>
+        <a href="#resources" class="btn-small">View Resources</a>
+      </div>
+    </div>
+  </section>
 
-    <meta
-      property="og:url"
-      content="https://cristhina23.github.io/wdd231/chamber/directory.html"
-    />
-    <script defer src="scripts/directory.js"></script>
-
-  </head>
-  <body>
-    <header>
-      <div class="container-header">
-        <div class="top">
-          <div class="image-logo">
-            <img class="logo" src="images/logo2.png" alt="" />
-          </div>
-          <div class="name">
-            <h2 class="name">
-               Chamber <br />
-              of Commerce
-            </h2>
-          </div>
+  <!-- Events Section -->
+  <section id="events" class="events">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+        <div class="event">
+          <h3>Business Networking Mixer</h3>
+          <p>July 30, 2025 - 6:00 PM</p>
+          <a href="#" class="btn-small">Register</a>
         </div>
-        <input type="checkbox" id="lanzador" />
-
-        <label aria-label="open menu" for="lanzador" class="menu-activador">
-          <span class="menu-activador-linea"></span>
-          <span class="menu-activador-linea"></span>
-          <span class="menu-activador-linea"></span>
-        </label>
-        <div class="bottom">
-          <nav>
-            <ul>
-              <li><a href="index.html" >Home</a></li>
-              <li><a href="discover.html">Discover</a></li>
-              <li class="active-link"><a href="directory.html">Directory</a></li>
-              <li><a href="join.html">Join</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
+        <div class="event">
+          <h3>Digital Marketing Workshop</h3>
+          <p>August 10, 2025 - 10:00 AM</p>
+          <a href="#" class="btn-small">Register</a>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="main-container">
-        <div class="main-top">
-          <h1>Directory</h1>
-          <div class="button-container">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-          </div>
-        </div>
-        <section class="cards-container grid" id="members-container"></section>
-      </div>
-    </main>
-    <footer>
-      <div class="global-container">
-        <div class="footer-container">
-          <p>Chamber of Commerce</p>
-          <p>Corner of Independence Avenue & </p>
-          <p>Castle Road Ridge, Accra</p>
-          <p>🌐 accrachamber.com.gh</p>
-          <p>233-541-810-441</p>
-        </div>
-        <div class="footer-container social">
-          <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle bx-md"></i></a>
-          <a href="#" aria-label="instagram"><i class="bx bxl-instagram bx-md"></i></a>
-          <a href="#" aria-label="Github"><i class="bx bxl-github bx-md"></i></a>
-        </div>
-        <div class="footer-container">
-          <p>WDD 231 Class Project</p>
-          <p>Peter Nartey</p>
-          <p>&copy;2025  🥝💐 ✏️ Peter Nartey ✏️ 💐🥝 Ghana</p>
-          <p>Last Updated: <span id="last-updated"></span></p>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </section>
 
-    <script type="module" src="scripts/directory.js"></script>
-  </body>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Members Say</h2>
+      <blockquote>
+        "The Chamber has been essential in helping me grow my boutique and connect with others in the business community."<br>
+        <cite>- Maria, Boutique Owner</cite>
+      </blockquote>
+      <blockquote>
+        "Through the Chamber’s programs, I’ve found opportunities to invest and build meaningful partnerships."
+        <cite>- Diego, Corporate Executive</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Become a Member Today</h2>
+      <p>Join a growing network of business professionals making a difference in Peter Nartey.</p>
+      <a href="#membership" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <div class="button-container">
+  <button id="gridView">Grid View</button>
+  <button id="listView">List View</button>
+</div>
+
+<div class="directory-display grid"> 
+  <!-- Cards go here -->
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy;2025  🥝💐 ✏️ Peter Nartey Chamber of Commerce✏️ 💐🥝 Ghana</p></div>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
