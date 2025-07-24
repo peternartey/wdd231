@@ -5,6 +5,9 @@
   --text-color: #333;
   --font-heading: 'Merriweather', serif;
   --font-body: 'Open Sans', sans-serif;
+
+  /* Define missing variable */
+  --lila: #D5A6E6; /* You can adjust the color as needed */
 }
 
 body {
@@ -45,13 +48,16 @@ nav ul {
   gap: 1rem;
   justify-content: center;
   margin: 0 auto;
+  padding: 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
 }
 
-.btn, .btn-small {
+.btn,
+.btn-small {
   background-color: var(--secondary-color);
   color: white;
   padding: 0.5rem 1rem;
@@ -82,7 +88,9 @@ nav a {
   text-align: center;
 }
 
-.events, .testimonials, .cta {
+.events,
+.testimonials,
+.cta {
   padding: 2rem 0;
 }
 
@@ -118,7 +126,6 @@ footer {
   }
 }
 
-
 /* Button Container Styling */
 .button-container {
   display: flex;
@@ -126,9 +133,9 @@ footer {
   gap: 1rem;
   margin: 1rem auto;
   padding: 1rem;
+  text-align: center;
 }
 
-/* Toggle View Buttons */
 .button-container button {
   background-color: var(--secondary-color);
   color: var(--text-color);
@@ -147,10 +154,9 @@ footer {
   transform: scale(1.05);
 }
 
-/* Active View Indicator (optional) */
 .button-container button.active {
   background-color: var(--lila);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Directory Display Layouts */
@@ -167,12 +173,12 @@ footer {
 }
 
 .logo img {
-  height: 50px; 
+  height: 50px;
   width: auto;
   display: block;
 }
 
-
+/* HERO IMAGE STYLING */
 .hero {
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
@@ -201,13 +207,13 @@ footer {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero .btn {
@@ -221,4 +227,33 @@ footer {
 
 .hero .btn:hover {
   background-color: #005fa3;
+}
+
+/* SERVICE LIST STYLING */
+#serviceList {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Grid view */
+#serviceList.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+/* List view */
+#serviceList.list {
+  display: block;
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+#serviceList li {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
 }
