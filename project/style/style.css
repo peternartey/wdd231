@@ -394,3 +394,7 @@ footer .contact-btn:hover {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+.hero {
+  background-attachment: fixed;
+  /* if you want parallax effect */
+}
