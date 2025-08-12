@@ -10,11 +10,13 @@
   <title>Peter Nartey Chamber of Commerce</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+ 
 
   <script src="scripts/discover.js" type="module"></script>
 
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Header -->
   <header>
     <div class="logo">
@@ -60,7 +62,7 @@
     </section>
   </header>
 
-  <main>
+  <main id="main-content">
     <h1>Discover New Businesses Close to You</h1>
     <div id="visits" class="visits-message"></div>
 
@@ -127,6 +129,16 @@
         <li>Support and advocacy for your business interests</li>
       </ul>
       <a href="join.html" class="btn">Become a Member Today</a>
+
+      - <section class="cards">
++ <section class="cards">
+    <!-- cards here -->
+- <!-- missing this: -->
++ </section>
+
+- <script src="scripts/discover.js" type="module"></script> <!-- remove from head -->
++ <script src="scripts/discover.js" type="module"></script> <!-- keep only before closing body -->
+
     </section>
   </main>
 

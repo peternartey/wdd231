@@ -1,6 +1,5 @@
 // discover.js - JavaScript module to add simple dynamic styling and interaction
 
-// Wait until DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Add a hover effect on business cards that changes background color
   const cards = document.querySelectorAll('.card');
@@ -55,4 +54,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Visits counter logic inside DOMContentLoaded
+  const visitsElement = document.getElementById('visits');
+  if (visitsElement) {
+    let visits = localStorage.getItem('visits');
+    if (!visits) {
+      visits = 1;
+      visitsElement.textContent = "Welcome! This is your first visit.";
+    } else {
+      visits = Number(visits) + 1;
+      visitsElement.textContent = `Welcome back! This is your visit number ${visits}.`;
+    }
+    localStorage.setItem('visits', visits);
+  }
+
+  // Load businesses data
+  loadBusinesses();
 });
+
+// Async function to load and display businesses
+async function loadBusinesses() {
+  try {
+    const response = await fetch('data/businesses.json');
+    if (!response.ok) throw new Error('Network response was not ok');
+    const businesses = await response.json();
+    const cardsContainer = document.querySelector('.cards');
+    if (!cardsContainer) return;
+    cardsContainer.innerHTML = ''; // Clear existing cards
+
+    businesses.forEach(biz => {
+      const article = document.createElement('article');
+      article.className = 'card';
+
+      article.innerHTML = `
+        <img src="${biz.image}" alt="${biz.alt}" loading="lazy" />
+        <h2>${biz.name}</h2>
+        <p>${biz.description}</p>
+        <a href="${biz.link}" class="btn-small">Learn More</a>
+      `;
+      cardsContainer.appendChild(article);
+    });
+  } catch (error) {
+    console.error('Failed to load businesses:', error);
+  }
+}

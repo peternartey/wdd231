@@ -67,12 +67,6 @@ nav a {
   margin-top: 0.5rem;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: #eeeeee;
-}
-
 .quick-links {
   display: flex;
   justify-content: space-between;
@@ -257,6 +251,7 @@ footer {
   border-radius: 8px;
   text-align: center;
 }
+
 .card.images-row {
   display: flex;
   gap: 1rem;
@@ -336,4 +331,40 @@ footer {
     width: 100%;
     margin-top: 1rem;
   }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    "card1 card2 card3";
+}
+
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
