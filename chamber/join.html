@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Peter Nartey" />
+  <meta name="description" content="Chamber of Commerce Directory" />
+
+  <title>Peter Nartey Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/menu-footer.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Chamber of Commerce" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:description"
+    content="Discover events, resources, and business opportunities at the PNartey Chamber of Commerce. Connect, grow, and support the local community." />
+  <meta property="og:image" content="https://peternartey.github.io/wdd231/Chamber/images/social-image.png" />
+  <meta property="og:url" content="https://peternartey.github.io/wdd231/Chamber/directory.html" />
+
+  <script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="container-header">
+    <div class="logo-container">
+      <img class="logo" src="images/logo3.png" alt="Chamber Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li class="active-link"><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Join Us</h1>
+  <div class="container">
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name:
+        <input type="text" name="firstName" title="First Name" required autocomplete="given-name" />
+      </label>
+      <label>
+        Last Name:
+        <input type="text" name="lastName" title="Last Name" required autocomplete="family-name" />
+      </label>
+      <label>
+        Organizational Title:
+        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@email.com" />
+      </label>
+      <label>
+        Mobile Number:
+        <input type="tel" name="mobile" title="Mobile Number" required autocomplete="tel" />
+      </label>
+      <label>
+        Organization Name:
+        <input type="text" name="organization" title="Organization Name" required autocomplete="organization" />
+      </label>
+      <label>
+        Membership Level:
+        <select name="membershipLevel" title="Membership Level">
+          <option value="np">NP Membership (Free)</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+      <label>
+        Organization Description:
+        <textarea name="orgDescription" title="Organization Description"></textarea>
+      </label>
+      <input type="hidden" name="timestamp" id="timestamp" />
+      <button type="submit" class="submit">Submit</button>
+    </form>
+
+    <div class="membership-cards">
+      <div class="membership-card" id="np-card">
+        <h3>NP Membership</h3>
+        <a href="#" id="modal-np-card">More Info</a>
+      </div>
+      <div class="membership-card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <a href="#" id="modal-bronze-card">More Info</a>
+      </div>
+      <div class="membership-card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <a href="#" id="modal-silver-card">More Info</a>
+      </div>
+      <div class="membership-card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <a href="#" id="modal-gold-card">More Info</a>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <dialog id="modal-np">
+      <p>No fee. Access to networking events.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-bronze">
+      <p>Basic promotion and training materials.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-silver">
+      <p>Includes spotlight ads and event discounts.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-gold">
+      <p>All benefits plus priority support and premium placement.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+  </div>
+</main>
+
+<footer>
+  <div class="global-container">
+    <div class="footer-container">
+      <p>Chamber of Commerce</p>
+      <p>Corner of Independence Avenue & Castle Road</p>
+      <p>Castle Road Ridge, Accra</p>
+      <p>🌐 accrachamber.com.gh</p>
+      <p>233-541-810-441</p>
+    </div>
+
+    <div class="footer-container social">
+      <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle bx-md"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bx bxl-instagram bx-md"></i></a>
+      <a href="#" aria-label="GitHub"><i class="bx bxl-github bx-md"></i></a>
+    </div>
+
+    <div class="footer-container">
+      <p>WDD 231 Class Project</p>
+      <p>Peter Nartey</p>
+      <p>&copy;2025 🥝💐 ✏️ Peter Nartey ✏️ 💐🥝 Ghana</p>
+      <p>Last Updated: <span id="last-updated"></span></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

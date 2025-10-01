@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peter Nartey Chamber of Commerce - Connecting and supporting local businesses." />
+  <meta name="author" content="Peter Nartey" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Peter Nartey Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+ 
+
+  <script src="scripts/discover.js" type="module"></script>
+
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo3.png" alt="PNartey Chamber Logo" />
+      </a>
+    </div>
+    <input type="checkbox" id="lanzador" />
+    <label aria-label="open menu" for="lanzador" class="menu-activador">
+      <span class="menu-activador-linea"></span>
+      <span class="menu-activador-linea"></span>
+      <span class="menu-activador-linea"></span>
+    </label>
+    <div class="bottom">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li class="active-link"><a href="discover.html" aria-current="page">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+           <a href="join.html" class="btn">Join</a>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section
+      class="hero"
+      style="
+        background-image: url('images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+      "
+    >
+      <div class="container">
+        <h1>Supporting Local Business in PNartey Chamber of Commerce</h1>
+        <p>Empowering our business community through resources, events, and connections.</p>
+        <a href="#join" class="btn">Join the Chamber</a>
+      </div>
+    </section>
+  </header>
+
+  <main id="main-content">
+    <h1>Discover New Businesses Close to You</h1>
+    <div id="visits" class="visits-message"></div>
+
+    <section class="cards">
+      <!-- Example business card -->
+      <article class="card">
+        <img src="images/images (3).jpg" alt="Business One Logo" />
+        <h2>GreenLeaf Organic Farm</h2>
+        <p>Providing fresh, organic produce from local farms to your doorstep.</p>
+        <a href="directory.html#greenleaf" class="btn-small">Learn More</a>
+      </article>
+
+      <article class="card">
+        <img src="images/local.jpeg" alt="Business Two Logo" />
+        <h2>BrightTech Solutions</h2>
+        <p>Innovative IT services and support tailored for small businesses.</p>
+        <a href="directory.html#brighttech" class="btn-small">Learn More</a>
+      </article>
+
+      <article class="card images-row">
+  <div class="images-container">
+    <img src="images/Ghana.jpg" alt="Business Three Logo" />
+    <img src="images/images (2).jpg" alt="Sunshine Café Interior" />
+  </div>
+  <div class="card-content">
+    <h2>Sunshine Café</h2>
+    <p>A cozy spot for great coffee and local treats.</p>
+    <a href="directory.html#sunshinecafe" class="btn-small">Learn More</a>
+  </div>
+</article>
+
+
+    <section class="events">
+      <h2>Upcoming Chamber Events</h2>
+      <ul>
+        <li>
+          <strong>Monthly Networking Mixer</strong><br />
+          Date: August 20, 2025<br />
+          Location: Chamber Headquarters<br />
+          Connect with other local business owners and expand your network.
+        </li>
+        <li>
+          <strong>Business Growth Workshop</strong><br />
+          Date: September 15, 2025<br />
+          Location: Online Webinar<br />
+          Learn effective marketing and sales strategies for your business.
+        </li>
+        <li>
+          <strong>Annual Awards Gala</strong><br />
+          Date: November 10, 2025<br />
+          Location: Accra Convention Center<br />
+          Celebrate the achievements of outstanding local businesses.
+        </li>
+      </ul>
+      <a href="events.html" class="btn">See All Events</a>
+    </section>
+
+    <section class="membership-benefits" id="join">
+      <h2>Why Join the PNartey Chamber?</h2>
+      <ul>
+        <li>Access to exclusive business resources and workshops</li>
+        <li>Opportunities to network with local leaders and entrepreneurs</li>
+        <li>Listing in our Business Directory to boost your visibility</li>
+        <li>Support and advocacy for your business interests</li>
+      </ul>
+      <a href="join.html" class="btn">Become a Member Today</a>
+
+      - <section class="cards">
++ <section class="cards">
+    <!-- cards here -->
+- <!-- missing this: -->
++ </section>
+
+- <script src="scripts/discover.js" type="module"></script> <!-- remove from head -->
++ <script src="scripts/discover.js" type="module"></script> <!-- keep only before closing body -->
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="global-container">
+      <div class="footer-container">
+        <p>Chamber of Commerce</p>
+        <p>Corner of Independence Avenue & Castle Road</p>
+        <p>Castle Road Ridge, Accra</p>
+        <p>🌐 <a href="https://accrachamber.com.gh" target="_blank" rel="noopener">accrachamber.com.gh</a></p>
+        <p><a href="tel:+233541810441">233-541-810-441</a></p>
+      </div>
+
+      <div class="footer-container social">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle bx-md"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram bx-md"></i></a>
+        <a href="#" aria-label="Github"><i class="bx bxl-github bx-md"></i></a>
+      </div>
+
+      <div class="footer-container">
+        <p>WDD 231 Class Project</p>
+        <p>Peter Nartey</p>
+        <p>&copy;2025 🥝💐 ✏️ Peter Nartey ✏️ 💐🥝 Ghana</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/discover.js" type="module"></script>
+</body>
+
+</html>
