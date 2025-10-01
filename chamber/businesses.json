@@ -1,0 +1,16 @@
+[
+  {
+    "name": "GreenLeaf Organic Farm",
+    "image": "images/images (3).jpg",
+    "alt": "Business One Logo",
+    "description": "Providing fresh, organic produce from local farms to your doorstep.",
+    "link": "directory.html#greenleaf"
+  },
+  {
+    "name": "BrightTech Solutions",
+    "image": "images/local.jpeg",
+    "alt": "Business Two Logo",
+    "description": "Innovative IT services and support tailored for small businesses.",
+    "link": "directory.html#brighttech"
+  }
+]

@@ -1,0 +1,192 @@
+/* ROOT VARIABLES */
+:root {
+  --primary-color: #2C3E50;
+  --secondary-color: #E67E22;
+  --bg-color: #F9F9F9;
+  --text-color: #333;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+h1, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+}
+/* === HEADER === */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--secondary-color);
+}
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.logo-container {
+  margin-bottom: 1rem;
+}
+.logo-container img.logo {
+  max-width: 180px;
+  height: auto;
+}
+/* === NAVIGATION === */
+nav {
+  width: 100%;
+  background-color: #34495e;
+  padding: 0.5rem 0;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  margin: 0;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover, nav a:focus {
+  color: var(--secondary-color);
+}
+nav .active-link a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+/* === MAIN === */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+main h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* === FORM STYLES === */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+form input, form select, form textarea {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button.submit {
+  grid-column: 1 / -1;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+form button.submit:hover {
+  background-color: #cf711f;
+}
+/* === MEMBERSHIP CARDS === */
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.membership-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.membership-card:hover {
+  transform: scale(1.03);
+}
+.membership-card h3 {
+  margin-bottom: 0.5rem;
+}
+.membership-card a {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+/* === MODALS === */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+.close-modal {
+  margin-top: 1rem;
+  background-color: var(--secondary-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* === FOOTER === */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+.global-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.footer-container p {
+  margin: 0.3rem 0;
+}
+.footer-container.social a {
+  margin: 0 0.5rem;
+  color: white;
+}
+.footer-container.social a:hover {
+  color: var(--secondary-color);
+}

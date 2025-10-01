@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Peter Nartey" />
-  <meta name="description" content="Chamber of Commerce Directory" />
+  <meta name="description" content="Peter Nartey Chamber of Commerce Directory – connecting, supporting, and growing local businesses in Accra and beyond." />
 
   <title>Peter Nartey Chamber of Commerce</title>
 
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/menu-footer.css" />
   <link rel="stylesheet" href="styles/styles.css" />
@@ -27,22 +27,29 @@
     rel="stylesheet" />
 
   <!-- Open Graph Meta -->
-  <meta property="og:title" content="Chamber of Commerce" />
+  <meta property="og:title" content="Peter Nartey Chamber of Commerce" />
   <meta property="og:type" content="website" />
   <meta
     property="og:description"
-    content="Discover events, resources, and business opportunities at the PNartey Chamber of Commerce. Connect, grow, and support the local community." />
+    content="Discover events, resources, and business opportunities at the Peter Nartey Chamber of Commerce. Connect, grow, and support the local community." />
   <meta property="og:image" content="https://peternartey.github.io/wdd231/Chamber/images/social-image.png" />
   <meta property="og:url" content="https://peternartey.github.io/wdd231/Chamber/directory.html" />
 
   <script defer src="scripts/join.js"></script>
+  <script>
+    // Auto-set timestamp on form load
+    document.addEventListener("DOMContentLoaded", () => {
+      const ts = document.getElementById("timestamp");
+      if (ts) ts.value = new Date().toISOString();
+    });
+  </script>
 </head>
 
 <body>
 <header>
   <div class="container-header">
     <div class="logo-container">
-      <img class="logo" src="images/logo3.png" alt="Chamber Logo"/>
+      <img class="logo" src="images/logo3.png" alt="PNartey Chamber Logo"/>
     </div>
     <nav>
       <ul>
@@ -57,7 +64,7 @@
 </header>
 
 <main>
-  <h1>Join Us</h1>
+  <h1>Join the Peter Nartey Chamber of Commerce</h1>
   <div class="container">
     <form method="get" action="thankyou.html">
       <label>
@@ -151,9 +158,15 @@
     </div>
 
     <div class="footer-container social">
-      <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle bx-md"></i></a>
-      <a href="#" aria-label="Instagram"><i class="bx bxl-instagram bx-md"></i></a>
-      <a href="#" aria-label="GitHub"><i class="bx bxl-github bx-md"></i></a>
+      <a href="#" aria-label="Facebook" rel="noopener noreferrer">
+        <i class="bx bxl-facebook-circle bx-md"></i>
+      </a>
+      <a href="#" aria-label="Instagram" rel="noopener noreferrer">
+        <i class="bx bxl-instagram bx-md"></i>
+      </a>
+      <a href="#" aria-label="GitHub" rel="noopener noreferrer">
+        <i class="bx bxl-github bx-md"></i>
+      </a>
     </div>
 
     <div class="footer-container">
