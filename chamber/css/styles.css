@@ -396,3 +396,62 @@ footer {
     margin-top: 1rem;
   }
 }
+
+/* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  width: 100%;
+  font-family: var(--font-body);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer .footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+footer h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: white; /* ✅ Changed from var(--lila) to white */
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+footer .contact-info {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1rem;
+}
+
+footer .project-info {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+footer .project-info strong {
+  color: var(--secondary-color);
+}
+
+footer .emoji {
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--lila);
+}
